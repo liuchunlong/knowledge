@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<ListView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:divider="@drawable/list_divider_line"
+        android:focusableInTouchMode="true"
+        android:dividerHeight="1dp"
+        android:cacheColorHint="#00000000"
+        android:id="@+id/general_industry_information_other_news_list"
+        android:layout_weight="100"
+        ></ListView>
+</LinearLayout>

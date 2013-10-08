@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="clear">#00000000</color>
+<color name="black">#000</color>
+<color name="white">#FFF</color>
+<color name="child_separator_color">#C6D4DE</color>
+<color name="deep_blue">#2D4488</color>
+<color name="dark_blue">#5368A6	</color>
+<color name="gray_blue">#8B96B9</color>
+<color name="light_blue">#94D3FF</color>
+<color name="gray">#EFF3FF</color>
+<color name="gray_word">#939393</color>
+<color name="deep_gray">#ECEDEE</color>
+</resources>
