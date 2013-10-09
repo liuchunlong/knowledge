@@ -28,9 +28,10 @@ public class ListContentActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//设置窗体的标题为空，仅此一句。但是需要在方法setContentView之前声明，原因你懂得。
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_contents);
 		MobclickAgent.setDebugMode( true );
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 //		String type	= getIntent().getStringExtra("type");
 		String type="dog";
 		Log.i(TAG,"type==="+type);
@@ -50,9 +51,10 @@ public class ListContentActivity extends Activity {
 //				goMain.putExtra("web", map.get("web"));
 //				goMain.setClass(ListContentActivity.this, KnowDetailActivity.class);
 //				startActivity(goMain);
-				 Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(map.get("web")));  
-			        it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");  
-			        startActivity(it);  
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(map.get("web")));  
+		        it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");  
+		        startActivity(it);  
+		        MobclickAgent.onEvent(getApplicationContext(), "dog_onclick");
 			}
 		});
 	}

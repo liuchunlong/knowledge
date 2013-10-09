@@ -145,22 +145,22 @@ public final class R {
         public static final int dog102=0x7f020064;
         public static final int ic_launcher=0x7f020065;
         public static final int list_divider_line=0x7f020066;
+        public static final int title=0x7f020067;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000d;
-        public static final int btnBg=0x7f0a000b;
-        public static final int btnDog=0x7f0a000a;
-        public static final int btnRare=0x7f0a0009;
+        public static final int action_settings=0x7f0a000c;
+        public static final int btnBg=0x7f0a000a;
+        public static final int btnDog=0x7f0a0009;
+        public static final int btnRare=0x7f0a0008;
         public static final int eneral_industry_information_news_item_wrap=0x7f0a0003;
         public static final int general_industry_information_news_pic=0x7f0a0004;
         public static final int general_industry_information_other_news_list=0x7f0a0000;
-        public static final int info_short=0x7f0a0006;
         public static final int info_title=0x7f0a0005;
         public static final int know_detail=0x7f0a0001;
         public static final int know_detail_web=0x7f0a0002;
-        public static final int tableRow1=0x7f0a0008;
-        public static final int textView1=0x7f0a0007;
-        public static final int txtTitle=0x7f0a000c;
+        public static final int tableRow1=0x7f0a0007;
+        public static final int textView1=0x7f0a0006;
+        public static final int txtTitle=0x7f0a000b;
     }
     public static final class layout {
         public static final int activity_contents=0x7f030000;

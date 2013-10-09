@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/title"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -27,9 +27,8 @@
         <activity android:name="com.ninemm.knowledge.KnowDetailActivity" >
         </activity>
         <meta-data android:value="525419d956240bbf9638004c" android:name="UMENG_APPKEY"></meta-data>
-		<meta-data android:value="KNOWLEDGE_TEST" android:name="UMENG_CHANNEL"/>
+		<meta-data android:value="KNOWLEDGE_360" android:name="UMENG_CHANNEL"/>
     </application>
-	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />

@@ -15,8 +15,7 @@ public class KnowDetailActivity extends Activity {
 		String shor		= getIntent().getStringExtra("short");
 		String detail	= getIntent().getStringExtra("detail");
 		String web	= getIntent().getStringExtra("web");
-		
-		String string	= title+"\n\n"+shor+"¡£\n\n"+detail;
+		String string	= title+"\n\n"+shor+"\n\n"+detail;
 		text.setText(string);
 		textWeb.setText(web);
 	}
