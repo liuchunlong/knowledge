@@ -21,8 +21,8 @@ public class MainActivity extends Activity {
 		FrameLayout frame2	= (FrameLayout)findViewById(R.id.btnDog);
 		btnRare = (Button)frame1.findViewById(R.id.btnBg);
 		btnDog = (Button)frame2.findViewById(R.id.btnBg);
-		((TextView)frame2.findViewById(R.id.txtTitle)).setText("ÊÀ½çÊ®´óÃûÈ®");
-		((TextView)frame1.findViewById(R.id.txtTitle)).setText("ÀäÖªÊ¶");
+		((TextView)frame2.findViewById(R.id.txtTitle)).setText("é•¿çŸ¥è¯†");
+		((TextView)frame1.findViewById(R.id.txtTitle)).setText("ä¸–ç•ŒåçŠ¬");
 		btnDog.setOnClickListener(new btnOnclickMethod());
 		btnRare.setOnClickListener(new btnOnclickMethod());
 		

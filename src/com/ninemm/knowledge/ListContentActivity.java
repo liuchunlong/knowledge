@@ -21,7 +21,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-public class ListContentActivity extends Activity {
+public class ListContentActivity extends BaseActivity {
 
 	private final static String TAG="listview";
 	private List<Map<String,String>> lists;
@@ -29,9 +29,9 @@ public class ListContentActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//设置窗体的标题为空，仅此一句。但是需要在方法setContentView之前声明，原因你懂得。
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		MobclickAgent.setDebugMode( true );
 		setContentView(R.layout.activity_contents);
-		MobclickAgent.setDebugMode( true );
 //		String type	= getIntent().getStringExtra("type");
 		String type="dog";
 		Log.i(TAG,"type==="+type);
@@ -128,7 +128,7 @@ public class ListContentActivity extends Activity {
 			return convertView;
 		}
 /**
- * 
+ * 		//首个条目，不接受点击事件
 		@Override
 		public boolean isEnabled(int position) {
 			// TODO Auto-generated method stub
@@ -144,13 +144,5 @@ public class ListContentActivity extends Activity {
 
 	}
 	
-	public void onResume() {
-		super.onResume();
-		MobclickAgent.onResume(this);
-	}
 	
-	public void onPause() {
-		super.onPause();
-		MobclickAgent.onPause(this);
-	}
 }

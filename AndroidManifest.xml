@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ninemm.knowledge.ListContentActivity"
+        android:name="com.ninemm.knowledge.ListContentActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,12 +22,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name="com.ninemm.knowledge.SelectPageActivity"
+         >
+        </activity>
         <activity android:name="com.ninemm.knowledge.MainActivity" >
         </activity>
         <activity android:name="com.ninemm.knowledge.KnowDetailActivity" >
         </activity>
         <meta-data android:value="525419d956240bbf9638004c" android:name="UMENG_APPKEY"></meta-data>
+        <!-- 
 		<meta-data android:value="KNOWLEDGE_360" android:name="UMENG_CHANNEL"/>
+         -->
+		<meta-data android:value="KNOWLEDGE_TEST" android:name="UMENG_CHANNEL"/>
     </application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
