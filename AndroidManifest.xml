@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-        android:name="com.ninemm.knowledge.ListContentActivity"
+            android:name="com.ninemm.knowledge.SelectPageActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +23,16 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name="com.ninemm.knowledge.SelectPageActivity"
+        android:name="com.ninemm.knowledge.ListContentActivity"
          >
         </activity>
         <activity android:name="com.ninemm.knowledge.MainActivity" >
         </activity>
         <activity android:name="com.ninemm.knowledge.KnowDetailActivity" >
         </activity>
+        <activity android:name="com.umeng.fb.ConversationActivity"/>
+		<activity android:name="com.umeng.fb.ContactActivity"/>
+		
         <meta-data android:value="525419d956240bbf9638004c" android:name="UMENG_APPKEY"></meta-data>
         <!-- 
 		<meta-data android:value="KNOWLEDGE_360" android:name="UMENG_CHANNEL"/>
@@ -38,5 +41,7 @@
     </application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
 </manifest>

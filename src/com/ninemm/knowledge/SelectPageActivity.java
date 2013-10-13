@@ -40,7 +40,7 @@ public class SelectPageActivity extends BaseActivity {
     private TextView textView1,textView2,textView3;  
     private List<View> views;// Tab页面列表  
     private int offset = 0;// 动画图片偏移量  
-    private int currIndex = 0;// 当前页卡编号  
+    private int currIndex = 1;// 当前页卡编号  
     private int bmpW;// 动画图片宽度  
     private View viewBack,viewList,viewMore;//各个页卡  
     /** 各个分页面的数据---开始 */
@@ -304,8 +304,8 @@ public class SelectPageActivity extends BaseActivity {
     
     
     private void loadView2(){
-    	agent	= new FeedbackAgent(getApplicationContext());
-    	agent.startFeedbackActivity();
+//    	agent	= new FeedbackAgent(SelectPageActivity.this);
+//    	agent.startFeedbackActivity();
     }
     
     private void loadView3(){
@@ -324,12 +324,9 @@ public class SelectPageActivity extends BaseActivity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			if(v==btnDog){
-				//jumpTo("dog");
-				agent	= new FeedbackAgent(getApplicationContext());
-		    	agent.startFeedbackActivity();
+				jumpTo("dog");
 			}else if(v==btnRare){
-				agent	= new FeedbackAgent(getApplicationContext());
-				agent.startFeedbackActivity();
+				jumpTo("rare");
 			}
 		}
 	}

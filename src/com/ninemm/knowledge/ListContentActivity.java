@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.fb.FeedbackAgent;
 
 import android.app.Activity;
 import android.content.Context;
