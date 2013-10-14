@@ -45,6 +45,8 @@ public class SelectPageActivity extends BaseActivity {
     private View viewBack,viewList,viewMore;//各个页卡  
     /** 各个分页面的数据---开始 */
     private List<Map<String,String>> lists;//用于listview中adapter的数据传递
+    private Button btnFlower;	//用于more页面
+    private Button btnCat;	//用于more页面
     private Button btnRare;	//用于more页面
 	private Button btnDog;//用于more页面
 	private FeedbackAgent agent;//反馈页面
@@ -62,12 +64,12 @@ public class SelectPageActivity extends BaseActivity {
         viewPager=(ViewPager) findViewById(R.id.vPager);  
         views=new ArrayList<View>();  
         LayoutInflater inflater=getLayoutInflater();  
-        viewBack=inflater.inflate(R.layout.activity_item, null);  
+        viewBack=inflater.inflate(R.layout.activity_fb, null);  
         viewList=inflater.inflate(R.layout.activity_contents, null);  
         viewMore=inflater.inflate(R.layout.activity_main, null);  
-        views.add(viewBack);  
         views.add(viewList);  
         views.add(viewMore);  
+        views.add(viewBack);  
         loadView1();
         loadView2();
         loadView3();
@@ -190,7 +192,7 @@ public class SelectPageActivity extends BaseActivity {
             animation.setFillAfter(true);// True:图片停在动画结束位置  
             animation.setDuration(300);  
             imageView.startAnimation(animation);  
-            Toast.makeText(SelectPageActivity.this, "您选择了"+ viewPager.getCurrentItem()+"页卡==="+target, Toast.LENGTH_SHORT).show();  
+//            Toast.makeText(SelectPageActivity.this, "您选择了"+ viewPager.getCurrentItem()+"页卡==="+target, Toast.LENGTH_SHORT).show();  
         }  
           
     } 
@@ -198,6 +200,7 @@ public class SelectPageActivity extends BaseActivity {
     /**
      * 下面是页面的加载的方法
      */
+//    *********************************************名犬页面---开始********************************************************
     /**  */
     private void loadView1(){
 	    String type="dog";
@@ -302,21 +305,46 @@ public class SelectPageActivity extends BaseActivity {
 
 	}
     
+//    *********************************************名犬页面---结束********************************************************
+	
+//    *********************************************关于页面---开始********************************************************
     
     private void loadView2(){
-//    	agent	= new FeedbackAgent(SelectPageActivity.this);
-//    	agent.startFeedbackActivity();
+    	Button btnFb	= (Button)viewBack.findViewById(R.id.fb_button);
+    	btnFb.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+		    	agent	= new FeedbackAgent(SelectPageActivity.this);
+		    	agent.startFeedbackActivity();
+			}
+		});
     }
+//    *********************************************关于页面---结束********************************************************
     
+//    *********************************************选择页面---开始********************************************************
     private void loadView3(){
     	FrameLayout frame1	= (FrameLayout)viewMore.findViewById(R.id.btnRare);
-		FrameLayout frame2	= (FrameLayout)viewMore.findViewById(R.id.btnDog);
+    	FrameLayout frame2	= (FrameLayout)viewMore.findViewById(R.id.btnDog);
+    	FrameLayout frame3	= (FrameLayout)viewMore.findViewById(R.id.btnCat);
+		FrameLayout frame4	= (FrameLayout)viewMore.findViewById(R.id.btnflower);
 		btnRare = (Button)frame1.findViewById(R.id.btnBg);
 		btnDog = (Button)frame2.findViewById(R.id.btnBg);
-		((TextView)frame2.findViewById(R.id.txtTitle)).setText("长知识");
-		((TextView)frame1.findViewById(R.id.txtTitle)).setText("世界名犬");
+		btnDog.setAlpha(0.7f);
+		btnCat = (Button)frame3.findViewById(R.id.btnBg);
+		btnFlower = (Button)frame4.findViewById(R.id.btnBg);
+		((TextView)frame1.findViewById(R.id.txtTitle)).setText("冷知识\n敬请期待下一版本");
+		((TextView)frame2.findViewById(R.id.txtTitle)).setText("世界名犬");
+		((TextView)frame3.findViewById(R.id.txtTitle)).setText("世界名猫\n敬请期待下一版本");
+		((TextView)frame4.findViewById(R.id.txtTitle)).setText("世界名花\n敬请期待1.04版本");
 		btnDog.setOnClickListener(new btnOnclickMethod());
-		btnRare.setOnClickListener(new btnOnclickMethod());
+//		
+//		btnRare.setOnClickListener(new btnOnclickMethod());
+//		btnCat.setOnClickListener(new btnOnclickMethod());
+//		btnFlower.setOnClickListener(new btnOnclickMethod());
+		btnRare.setEnabled(false);
+		btnCat.setEnabled(false);
+		btnFlower.setEnabled(false);
+		
     }
     //按钮点击统一处理方法
     private final class btnOnclickMethod implements OnClickListener{
@@ -326,7 +354,7 @@ public class SelectPageActivity extends BaseActivity {
 			if(v==btnDog){
 				jumpTo("dog");
 			}else if(v==btnRare){
-				jumpTo("rare");
+				//jumpTo("rare");
 			}
 		}
 	}
@@ -339,5 +367,6 @@ public class SelectPageActivity extends BaseActivity {
 		startActivity(goMain);
 		
 	}
+//    *********************************************选择页面---结束********************************************************
     
 }  
